@@ -8,12 +8,14 @@ public class PlayerWeapon : MonoBehaviour
     public float speed = 5f;
 
     public GameObject Weapon;
+    public GameObject WeaponPrefab;
 
     Vector2 mousePos;
 
     private void Start()
     {
-
+        Weapon = Instantiate(WeaponPrefab);
+        Weapon.transform.parent = transform;
     }
 
     private void Update()

@@ -6,8 +6,6 @@ public class ShortBow : MonoBehaviour
 {
     public float MaxDrawTime = 5f;
     public float MinDrawTime = 1f;
-    
-    public Sprite sprite;
 
     private void Awake()
     {
