@@ -9,6 +9,7 @@ public class PlayerWeapon : MonoBehaviour
 
     public GameObject Weapon;
     public GameObject WeaponPrefab;
+    private Player player;
 
     Vector2 mousePos;
 
@@ -16,11 +17,14 @@ public class PlayerWeapon : MonoBehaviour
     {
         Weapon = Instantiate(WeaponPrefab);
         Weapon.transform.parent = transform;
+        player = FindObjectOfType<Player>();
     }
 
     private void Update()
     {
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if(Weapon != player.equippedWeapon) Weapon = player.equippedWeapon;
+        if(player.weaponTransform != transform) player.weaponTransform = transform;
     }
 
     // Update is called once per frame

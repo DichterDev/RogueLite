@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public PlayerStats playerStats;
+    public Player player;
     private Rigidbody2D rb;
     private float moveSpeed;
 
@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        playerStats = FindObjectOfType<PlayerStats>();
+        player = FindObjectOfType<Player>();
     }
 
     // Start is called before the first frame update
@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
         movement = movement.normalized;
 
-        moveSpeed = playerStats.Velocity;
+        moveSpeed = player.Velocity;
     }
 
     private void FixedUpdate()
