@@ -250,7 +250,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  Weapon: {fileID: 2288562360542001976, guid: 42c3f6072b3ee974e8234ea6439e4791, type: 3}
+  Weapon: {fileID: 0}
+  WeaponPrefab: {fileID: 2288562360542001976, guid: 42c3f6072b3ee974e8234ea6439e4791, type: 3}
 --- !u!1 &1569460840
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,8 +287,8 @@ MonoBehaviour:
   rb: {fileID: 1569460843}
   CurrentHP: 10
   MaxHP: 10
-  Velocity: 0
-  MaxVelocity: 0
+  Velocity: 5
+  MaxVelocity: 10
   CritChance: 5
   CritMultiplier: 1
   Coins: 0
@@ -303,6 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e08e8fa53ea07494eb3ac1bcec87092a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerStats: {fileID: 0}
 --- !u!50 &1569460843
 Rigidbody2D:
   serializedVersion: 4
