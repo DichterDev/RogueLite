@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStats : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public GameObject equippedWeapon;
+    public Transform weaponTransform;
 
     public int CurrentHP = 10;
     public int MaxHP = 10;
