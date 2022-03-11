@@ -6,7 +6,10 @@ public class PlayerMovement : MonoBehaviour
 {
     public Player player;
     private Rigidbody2D rb;
-    private float moveSpeed;
+    private float moveSpeed = 10f;
+    public Animator animator;
+    float VerticalMove;
+    float HorizontalMove;
 
     Vector2 movement;
 
@@ -27,6 +30,15 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         movement = movement.normalized;
+
+        HorizontalMove = Input.GetAxisRaw("Horizontal") * moveSpeed;
+        VerticalMove = Input.GetAxisRaw("Vertical") * moveSpeed;
+
+
+        animator.SetFloat("Walk", VerticalMove);
+        animator.SetFloat("Sideways", HorizontalMove);
+
+
 
         moveSpeed = player.Velocity;
     }
