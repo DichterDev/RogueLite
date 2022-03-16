@@ -2,24 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeedBoostItem : MonoBehaviour
+[CreateAssetMenu(menuName = "Items/SpeedBuff")]
+public class ItemSpeedBuff : ItemBuffEffect
 {
-    public int SpeedBoost = 5;
-    private Player player;
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    public float amount = 5f;
+    public override void Apply(GameObject go)
     {
-
-        if (collision.collider == null)
-        {
-            return;
-        }
-        else if (collision.gameObject.name == "Player")
-        {
-            player = collision.gameObject.GetComponent<Player>();
-            player.Velocity += SpeedBoost;
-            
-            Destroy(gameObject);
-        }
+        go.GetComponent<Player>().Velocity += amount;
     }
 }
