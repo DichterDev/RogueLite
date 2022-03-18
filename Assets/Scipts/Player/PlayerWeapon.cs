@@ -8,15 +8,13 @@ public class PlayerWeapon : MonoBehaviour
     public float speed = 5f;
 
     public GameObject Weapon;
-    public GameObject WeaponPrefab;
+    //public GameObject WeaponPrefab;
     private Player player;
 
     Vector2 mousePos;
 
     private void Start()
     {
-        Weapon = Instantiate(WeaponPrefab);
-        Weapon.transform.parent = transform;
         player = FindObjectOfType<Player>();
     }
 
@@ -31,7 +29,7 @@ public class PlayerWeapon : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 lookDir = mousePos - (Vector2)transform.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 45f;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg + 90;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = rotation;
     }   
