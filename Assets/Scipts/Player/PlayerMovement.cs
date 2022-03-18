@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-        moveSpeed = player.Velocity;
+        moveSpeed = player.Speed;
     }
 
     private void FixedUpdate()

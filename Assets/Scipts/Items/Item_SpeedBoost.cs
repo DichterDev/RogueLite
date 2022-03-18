@@ -5,9 +5,14 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Items/SpeedBuff")]
 public class ItemSpeedBuff : ItemBuffEffect
 {
+    /// <summary>
+    /// Adds an Speedbuff to the target
+    /// </summary>
+
+
     public float amount = 5f;
-    public override void Apply(GameObject go)
+    public override void Apply(GameObject target)
     {
-        go.GetComponent<Player>().Velocity += amount;
+        target.GetComponent<Player>().Speed += amount;
     }
 }

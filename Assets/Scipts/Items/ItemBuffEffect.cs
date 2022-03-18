@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class ItemBuffEffect : ScriptableObject
 {
-    public abstract void Apply (GameObject go);
+    public abstract void Apply (GameObject target);
 }

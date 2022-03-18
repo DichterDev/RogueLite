@@ -339,7 +339,6 @@ GameObject:
   - component: {fileID: 1569460844}
   - component: {fileID: 1569460843}
   - component: {fileID: 1569460842}
-  - component: {fileID: 1569460841}
   - component: {fileID: 1569460846}
   m_Layer: 0
   m_Name: Player
@@ -348,28 +347,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1569460841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1569460840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95435046ed98bc442bc32ed7fe3d5f4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1569460843}
-  equippedWeapon: {fileID: 0}
-  weaponTransform: {fileID: 0}
-  CurrentHP: 10
-  MaxHP: 10
-  Velocity: 5
-  MaxVelocity: 10
-  CritChance: 5
-  CritMultiplier: 1
-  Coins: 0
 --- !u!114 &1569460842
 MonoBehaviour:
   m_ObjectHideFlags: 0
