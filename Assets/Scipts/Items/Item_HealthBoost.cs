@@ -12,6 +12,6 @@ public class Item_HealthBoost : ItemBuffEffect
 
     public override void Apply(GameObject target)
     {
-        target.GetComponent<Player>().CurrentHP += amount;
+        target.GetComponent<PlayerManager>().CurrentHP += amount;
     }
 }

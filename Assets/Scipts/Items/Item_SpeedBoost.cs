@@ -13,6 +13,6 @@ public class ItemSpeedBuff : ItemBuffEffect
     public float amount = 5f;
     public override void Apply(GameObject target)
     {
-        target.GetComponent<Player>().Speed += amount;
+        target.GetComponent<PlayerManager>().Speed += amount;
     }
 }

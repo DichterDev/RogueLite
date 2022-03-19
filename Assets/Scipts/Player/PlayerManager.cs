@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Player : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
     public Rigidbody2D rb;
     public GameObject equippedWeapon;
@@ -17,4 +17,21 @@ public abstract class Player : MonoBehaviour
     public int Coins = 0;
     public float attackSpeed = 1.0f;
     public float Strength = 1.0f;
+
+    public void TakeDamage(int amount)
+    {
+        CurrentHP -= amount;
+
+        if (CurrentHP <= 0)
+        {
+            //Death
+        }
+    }
+
+    public void Heal(int amount)
+    {
+        CurrentHP += amount;
+
+        if (CurrentHP > MaxHP) CurrentHP = MaxHP;
+    }
 }

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Player player;
+    public PlayerManager player;
     private Rigidbody2D rb;
     private float moveSpeed = 10f;
-    public Animator animator;
+    // public Animator animator;
     float VerticalMove;
     float HorizontalMove;
 
@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        player = FindObjectOfType<Player>();
+        player = FindObjectOfType<PlayerManager>();
     }
 
     // Start is called before the first frame update
@@ -35,8 +35,8 @@ public class PlayerMovement : MonoBehaviour
         VerticalMove = Input.GetAxisRaw("Vertical") * moveSpeed;
 
 
-        animator.SetFloat("Walk", VerticalMove);
-        animator.SetFloat("Sideways", HorizontalMove);
+        // animator.SetFloat("Walk", VerticalMove);
+        // animator.SetFloat("Sideways", HorizontalMove);
 
 
 
