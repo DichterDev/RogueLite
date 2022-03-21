@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName ="Items/HealthBoost")]
-public class Item_HealthBoost : ItemBuffEffect
+public class Item_MaxHealthBoost : ItemBuffEffect
 {
     /// <summary>
-    /// Adds Health to the Player
+    /// Adds MaxHealth to the Player
     /// </summary>
 
     public int amount;
