@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(menuName ="Items/StrenthBoost")]
 public class Item_StrBoost : ItemBuffEffect
 {
     /// <summary>

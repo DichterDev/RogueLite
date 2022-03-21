@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Items/SpeedBuff")]
+[CreateAssetMenu(menuName = "Items/SpeedBoost")]
 public class ItemSpeedBuff : ItemBuffEffect
 {
     /// <summary>
