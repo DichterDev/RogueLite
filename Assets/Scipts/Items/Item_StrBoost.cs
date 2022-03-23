@@ -13,6 +13,6 @@ public class Item_StrBoost : ItemBuffEffect
 
     public override void Apply(GameObject target)
     {
-        target.GetComponent<Player>().Strength += amount;
+        target.GetComponent<PlayerManager>().Strength += amount;
     }
 }

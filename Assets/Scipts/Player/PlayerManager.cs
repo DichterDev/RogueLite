@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Player : MonoBehaviour
+public abstract class PlayerManager : MonoBehaviour
 {
     public Rigidbody2D rb;
     public GameObject equippedWeapon;
@@ -21,4 +21,25 @@ public abstract class Player : MonoBehaviour
     
     public float attackSpeed = 1.0f;
     public float Strength = 1.0f;
+
+    public void TakeDamage(int damage)
+    {
+        CurrentHP -= damage;
+
+        // if (CurrentHP <= 0) Death
+    }
+
+    public void GainHealth(int amount)
+    {
+        CurrentHP += amount;
+        if (CurrentHP > MaxHP) CurrentHP = MaxHP;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("EnemyProjectile"))
+        {
+
+        }
+    }
 }

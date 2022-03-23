@@ -9,13 +9,13 @@ public class PlayerWeapon : MonoBehaviour
 
     public GameObject Weapon;
     //public GameObject WeaponPrefab;
-    private Player player;
+    private PlayerManager player;
 
     Vector2 mousePos;
 
     private void Start()
     {
-        player = FindObjectOfType<Player>();
+        player = FindObjectOfType<PlayerManager>();
     }
 
     private void Update()

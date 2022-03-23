@@ -7,15 +7,21 @@ public class ArrowShooting : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
 
-    public float bulletForce = 5f;
-    public float bulletTimer = 5f;
-    public float shootTimer;
-    public float coolDownTime = 0.5f;
+    public bool UserType;
+
+    private float ArrowForce;
+    private float BowDrawtime;
+    private float shootTimer;
+
+    private void Start()
+    {
+        
+    }
 
     void FixedUpdate()
     {
         shootTimer += Time.deltaTime;
-        if (shootTimer > coolDownTime && Input.GetButton("Fire1"))
+        if (shootTimer > BowDrawtime && Input.GetButton("Fire1"))
         {
             shootTimer = 0f;
 
@@ -26,10 +32,11 @@ public class ArrowShooting : MonoBehaviour
     void Shoot()
     {
         GameObject arrow = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        arrow.name = "arrow";
+        arrow.name = "Arrow";
+        if (UserType) arrow.tag = "Projectile";
+        else arrow.tag = "EnemyProjectile";
         Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
-        rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
-        Destroy(arrow, bulletTimer);
-
+        rb.AddForce(firePoint.up * ArrowForce, ForceMode2D.Impulse);
+        Destroy(arrow, 3f);
     }
 }
