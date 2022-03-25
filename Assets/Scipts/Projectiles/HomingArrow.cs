@@ -30,15 +30,6 @@ public class HomingArrow : MonoBehaviour
         rb.velocity = transform.up * projectileManager.ProjSpeed;
     }
 
-    void Shoot()
-    {
-        GameObject arrow = Instantiate(projectileManager.Projectile, projectileManager.firePoint.position, projectileManager.firePoint.rotation);
-        arrow.name = "Arrow";
-        arrow.tag = "Projectile";
-        Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
-        rb.AddForce(projectileManager.firePoint.up * projectileManager.ProjForce, ForceMode2D.Impulse);
-    }
-
     /// <summary>
     /// Method <c>GetClosestEnemy</c> gets the nearest target
     /// <see href="https://forum.unity.com/threads/clean-est-way-to-find-nearest-object-of-many-c.44315/">Source</see>

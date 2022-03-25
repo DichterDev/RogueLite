@@ -11,4 +11,5 @@ public class ProjectileManager : ScriptableObject
     public int Damage;
     public float ProjSpeed;
     public float ProjForce;
+    public float ProjTime;
 }

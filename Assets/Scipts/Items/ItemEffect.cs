@@ -8,7 +8,7 @@ public class ItemEffect : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(collision.gameObject);
             itemBuffEffect.Apply(collision.gameObject);
