@@ -8,8 +8,6 @@ public class BouncingBullet : MonoBehaviour
     public GameObject bullet;
     public Rigidbody2D rb;
 
-    private Vector3 tempVelocity;
-
     private void Start()
     {
         rb.velocity = Vector2.up * projectile.ProjSpeed;
@@ -22,11 +20,16 @@ public class BouncingBullet : MonoBehaviour
 
     private void FixedUpdate()
     {
-
+        transform.Translate(Vector2.up * Time.deltaTime * projectile.ProjSpeed);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        ContactPoint2D cp = collision.GetContact(0);
+        ContactPoint2D cp = collision.contacts[0];
+        Vector2 newDir = Vector2.zero;
+        Vector2 curDire = this.transform.TransformDirection(Vector2.up);
+
+        newDir = Vector2.Reflect(curDire, cp.normal);
+        transform.rotation = Quaternion.FromToRotation(Vector2.up, newDir);
     }
 }
