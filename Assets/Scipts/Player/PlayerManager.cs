@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class PlayerManager : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
     public Rigidbody2D rb;
     public GameObject equippedWeapon;

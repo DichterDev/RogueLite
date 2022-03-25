@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d398f57bdac93749b5f4e58fe781f0a, type: 3}
-  m_Name: HomingArrow
+  m_Name: BouncingBullet
   m_EditorClassIdentifier: 
   firePoint: {fileID: 0}
   Projectile: {fileID: 0}
   Damage: 0
   ProjSpeed: 1
-  ProjForce: 5
+  ProjForce: 2

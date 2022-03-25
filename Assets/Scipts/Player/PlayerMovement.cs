@@ -38,9 +38,6 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Walk", VerticalMove);
         animator.SetFloat("Sideways", HorizontalMove);
 
-
-
-        Debug.Log(player.Speed);
         moveSpeed = player.Speed;
     }
 
