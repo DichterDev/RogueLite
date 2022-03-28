@@ -25,7 +25,6 @@ public class PlayerWeapon : MonoBehaviour
         if(player.weaponTransform != transform) player.weaponTransform = transform;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         Vector2 lookDir = mousePos - (Vector2)transform.position;

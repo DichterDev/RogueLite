@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91daef3f076eb92428ac066feeb7c19e, type: 3}
   m_Name: '[SO]HomingBow'
   m_EditorClassIdentifier: 
-  DrawTime: 0
-  Damage: 0
-  ArrowForce: 0
+  firePoints:
+  - {fileID: 1461484656564568656, guid: 7cc1046c6059db44aa810281519591d1, type: 3}
+  DrawTime: 0.64
+  Damage: 3
+  ArrowForce: 5

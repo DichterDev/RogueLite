@@ -34,6 +34,8 @@ public class HomingBow : MonoBehaviour
             {
                 percent = DrawTime / PlayerDrawTime;    
             }
+
+            Shoot(percent);
         }
     }
 

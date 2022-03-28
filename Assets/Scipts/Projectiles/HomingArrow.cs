@@ -55,10 +55,9 @@ public class HomingArrow : MonoBehaviour
         return bestTarget;
     }
 
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!collision.gameObject.CompareTag("Player")) Destroy(gameObject);
+        if (collision.gameObject.CompareTag("Player")) { }
         else if (!collision.gameObject.CompareTag("Projectile")) Destroy(gameObject);
         else Destroy(gameObject);
     }
