@@ -21,8 +21,6 @@ public class PlayerWeapon : MonoBehaviour
     private void Update()
     {
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if(Weapon != player.equippedWeapon) Weapon = player.equippedWeapon;
-        if(player.weaponTransform != transform) player.weaponTransform = transform;
     }
 
     void FixedUpdate()

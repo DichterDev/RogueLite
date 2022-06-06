@@ -1,4 +1,4 @@
-
+/*
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,8 +15,6 @@ public class Shooting : MonoBehaviour
 
     void FixedUpdate()
     {
-       
-        
             shootTimer += Time.deltaTime;
             if (shootTimer > coolDownTime && Input.GetButton("Fire1"))
             {
@@ -24,8 +22,6 @@ public class Shooting : MonoBehaviour
 
                 Shoot();
             }
-
-        
     }
 
     void Shoot()
@@ -38,8 +34,5 @@ public class Shooting : MonoBehaviour
         
     }
 
-   
-
-   
-
 }
+*/

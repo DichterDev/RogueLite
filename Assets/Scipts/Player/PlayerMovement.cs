@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public PlayerManager player;
     private Rigidbody2D rb;
     private float moveSpeed = 10f;
-    public Animator animator;
+    // public Animator animator;
     float VerticalMove;
     float HorizontalMove;
 
@@ -35,10 +35,15 @@ public class PlayerMovement : MonoBehaviour
         VerticalMove = Input.GetAxisRaw("Vertical") * moveSpeed;
 
 
-        animator.SetFloat("Walk", VerticalMove);
-        animator.SetFloat("Sideways", HorizontalMove);
+        // animator.SetFloat("Walk", VerticalMove);
+        // animator.SetFloat("Sideways", HorizontalMove);
 
         moveSpeed = player.Speed;
+
+        if(Input.GetKey(KeyCode.Space) && player.Dodge)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, -1);
+        }
     }
 
     private void FixedUpdate()
