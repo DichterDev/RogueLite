@@ -15,7 +15,6 @@ public class Firepoints : MonoBehaviour
 
         for (int i = 0; i < manager.Firepoints; i++)
         {
-            Vector3
             GameObject go = Instantiate(new GameObject());
             go.tag = "FirePoint";
             go.transform.parent = transform;
