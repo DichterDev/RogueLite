@@ -7,6 +7,7 @@ public class ProjectileSpammerManager : ScriptableObject
 {
     public GameObject Projectile;
 
+    public int Firepoints;
     public int ProjDamage;
     public float ProjSpeed;
     public float ProjForce;
