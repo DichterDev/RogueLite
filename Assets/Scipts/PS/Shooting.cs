@@ -19,12 +19,13 @@ public class Shooting : MonoBehaviour
         {
             if (component.tag == "FirePoint") firePoints.Add(component.transform);
         }
+        Debug.Log(firePoints);
     }
 
     void FixedUpdate()
     {
             shootTimer += Time.deltaTime;
-            if (shootTimer > manager.FireRate)
+            if (shootTimer > 1 / manager.FireRate)
             {
                 shootTimer = 0f;
                 Shoot();

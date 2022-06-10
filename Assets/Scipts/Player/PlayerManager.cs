@@ -5,12 +5,11 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public HealthBar healthBar;
+    public Sprite heart_full;
+    public Sprite heart_empty;
 
-    public int CurrentHP = 10;
-    public int MaxHP = 10;
-    public int Coins = 0;
-    public int playerSpeed = 10;
+    public int CurrentHP = 3;
+    public int MaxHP = 3;
 
     public float Speed = 5f;
     public float MaxSpeed = 10f;
