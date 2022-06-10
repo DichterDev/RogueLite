@@ -9,7 +9,7 @@ public class Firepoints : MonoBehaviour
     float rotation = 360;
     Vector3 pos = new Vector3();
 
-    private void Start()
+    private void Awake()
     {
         rotation = rotation / manager.Firepoints;
         pos = transform.TransformPoint(new Vector3(0, 0.5f));
