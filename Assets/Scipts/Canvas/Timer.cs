@@ -11,11 +11,19 @@ public class Timer : MonoBehaviour
     private void Update()
     {
         deltaTimer += Time.deltaTime;
-        if (deltaTimer > 1f)
+        if (deltaTimer >= 1f)
         {
             gameObject.GetComponent<Text>().text = timerValue + " s";
             deltaTimer = 0f;
             timerValue++;
+        }
+
+        if (timerValue == 20)
+        {
+            timerValue = 0f;
+            GameObject.FindGameObjectWithTag("Player").transform.localScale = new Vector3(0, -4, -1);
+            // Reinstantiate current room
+            // countdown and start
         }
     }
 }

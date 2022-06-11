@@ -8,6 +8,8 @@ TagManager:
   - FirePoint
   - Projectile
   - Heart
+  - Timer
+  - DeathCount
   layers:
   - Default
   - TransparentFX

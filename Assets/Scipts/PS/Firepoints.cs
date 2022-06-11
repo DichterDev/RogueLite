@@ -12,7 +12,7 @@ public class Firepoints : MonoBehaviour
     private void Awake()
     {
         rotation = rotation / manager.Firepoints;
-        pos = transform.TransformPoint(new Vector3(0, 0.5f));
+        pos = transform.TransformPoint(new Vector3(0, gameObject.GetComponentInChildren<SpriteRenderer>().bounds.size.y));
 
         for (int i = 0; i < manager.Firepoints; i++)
         {
