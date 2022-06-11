@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class DifficultySelect : MonoBehaviour
 {
-    public void MoveToScene (int sceneID)
+    public void MoveToScene(int sceneID)
     {
         SceneManager.LoadScene(sceneID);
     }
-    public void QuitGame()
+
+    public void Difficulty(bool Difficulty)
     {
-        Debug.Log("Quit");
-        Application.Quit();
+        
     }
+
 }
