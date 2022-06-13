@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Rotation : MonoBehaviour
 {
-    public ProjectileSpammerManager manager;
+    ProjectileSpammerManager manager;
 
-    // Update is called once per frame
+    private void Awake()
+    {
+        manager = GetComponent<Shooting>().manager;
+    }
+
     void Update()
     {
         gameObject.transform.Rotate(0, 0, manager.SpinSpeed * Time.deltaTime);

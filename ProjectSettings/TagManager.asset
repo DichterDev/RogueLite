@@ -4,12 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Spawn Enemy
   - FirePoint
   - Projectile
   - Heart
   - Timer
   - DeathCount
+  - Room
   layers:
   - Default
   - TransparentFX

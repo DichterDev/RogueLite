@@ -26,9 +26,7 @@ public class PlayerManager : MonoBehaviour
 
         if (CurrentHP <= 0)
         {
-            GameObject.FindGameObjectWithTag("DeathCount").GetComponent<Text>().text = $"Deaths: {Deaths}";
-            Deaths++;
-            CurrentHP = MaxHP;
+            Death();
         }
     }
 
@@ -40,6 +38,13 @@ public class PlayerManager : MonoBehaviour
 
     public void SetHealthMax()
     {
+        CurrentHP = MaxHP;
+    }
+
+    public void Death()
+    {
+        GameObject.FindGameObjectWithTag("DeathCount").GetComponent<Text>().text = $"Deaths: {Deaths}";
+        Deaths++;
         CurrentHP = MaxHP;
     }
 }

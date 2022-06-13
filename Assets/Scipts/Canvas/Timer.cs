@@ -8,6 +8,14 @@ public class Timer : MonoBehaviour
     float deltaTimer = 0f;
     float timerValue = 1f;
 
+    GameObject[] rooms;
+
+    private void Awake()
+    {
+        rooms = GameObject.FindGameObjectsWithTag("Room");
+        Debug.Log(rooms.Length);
+    }
+
     private void Update()
     {
         deltaTimer += Time.deltaTime;
@@ -25,5 +33,11 @@ public class Timer : MonoBehaviour
             // Reinstantiate current room
             // countdown and start
         }
+    }
+
+    void RoomReset()
+    {
+        GameObject room = GameObject.FindGameObjectWithTag("Room");
+        Destroy(room);
     }
 }

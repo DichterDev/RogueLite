@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Firepoints : MonoBehaviour
 {
-    public ProjectileSpammerManager manager;
+    ProjectileSpammerManager manager;
 
     float rotation = 360;
     Vector3 pos = new Vector3();
 
     private void Awake()
     {
+        manager = GetComponent<Shooting>().manager;
+
         rotation = rotation / manager.Firepoints;
         pos = transform.TransformPoint(new Vector3(0, gameObject.GetComponentInChildren<SpriteRenderer>().bounds.size.y));
 
