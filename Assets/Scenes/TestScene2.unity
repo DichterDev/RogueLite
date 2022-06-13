@@ -2467,7 +2467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 524237501}
   heart_full: {fileID: 21300000, guid: 3e3f6b1dc9fb5a44191b33fee9810c7d, type: 3}
-  heart_empty: {fileID: 21300000, guid: 2736d737fe62a76468e7a603481c5a47, type: 3}
+  heart_empty: {fileID: 21300000, guid: 028cb1271bca4ea40941247f40ea4e7e, type: 3}
   CurrentHP: 3
   MaxHP: 3
   Deaths: 0
@@ -8212,6 +8212,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1615675419}
     m_Modifications:
+    - target: {fileID: 5238641459570246457, guid: a1b552efdfd458a49adcd69e7780e9fb, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 11400000, guid: d5d9a48902989ba468062d1c94b51d07, type: 2}
     - target: {fileID: 5238641459570246459, guid: a1b552efdfd458a49adcd69e7780e9fb, type: 3}
       propertyPath: m_RootOrder
       value: 5

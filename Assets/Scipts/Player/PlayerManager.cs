@@ -45,7 +45,7 @@ public class PlayerManager : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("DeathCount").GetComponent<Text>().text = $"Deaths: {Deaths}";
         Deaths++;
-        CurrentHP = MaxHP;
+        SetHealthMax();
         GameObject.FindGameObjectWithTag("Player").transform.localPosition = new Vector3(0, -4, -1);
         GameObject.FindObjectOfType<Camera>().GetComponent<RoomManager>().RoomReset();
         GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().timerValue = 20f;

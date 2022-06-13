@@ -48,7 +48,7 @@ public class RoomManager : MonoBehaviour
 
     public void NextRoom()
     {
-        foreach(GameObject proj in GameObject.FindGameObjectsWithTag("Projectile"))
+        foreach (GameObject proj in GameObject.FindGameObjectsWithTag("Projectile"))
         {
             Destroy(proj);
         }
