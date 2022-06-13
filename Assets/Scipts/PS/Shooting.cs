@@ -8,10 +8,8 @@ public class Shooting : MonoBehaviour
     public ProjectileSpammerManager manager;
 
     private List<Transform> firePoints = new List<Transform>();
-
-    public float bulletForce = 5f;
-    public float bulletTimer = 1f;
-    public float shootTimer;
+    
+    private float shootTimer;
 
     private void Start()
     {
@@ -19,7 +17,6 @@ public class Shooting : MonoBehaviour
         {
             if (component.tag == "FirePoint") firePoints.Add(component.transform);
         }
-        Debug.Log(firePoints);
     }
 
     void FixedUpdate()
@@ -39,7 +36,7 @@ public class Shooting : MonoBehaviour
             GameObject bullet = Instantiate(manager.Projectile, t.position, t.rotation);
             bullet.name = "bullet";
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.AddForce(t.up * bulletForce, ForceMode2D.Impulse);
+            rb.AddForce(t.up * manager.ProjForce, ForceMode2D.Impulse);
         }
     }
 }

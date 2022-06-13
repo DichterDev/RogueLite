@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PlayerManager : MonoBehaviour
 
     public int CurrentHP = 3;
     public int MaxHP = 3;
+    public int Deaths = 0;
 
     public float Speed = 5f;
     public float MaxSpeed = 10f;
@@ -22,12 +24,27 @@ public class PlayerManager : MonoBehaviour
     {
         CurrentHP -= damage;
 
-        // if (CurrentHP <= 0) Death
+        if (CurrentHP <= 0)
+        {
+            Death();
+        }
     }
 
     public void GainHealth(int amount)
     {
         CurrentHP += amount;
         if (CurrentHP > MaxHP) CurrentHP = MaxHP;
+    }
+
+    public void SetHealthMax()
+    {
+        CurrentHP = MaxHP;
+    }
+
+    public void Death()
+    {
+        GameObject.FindGameObjectWithTag("DeathCount").GetComponent<Text>().text = $"Deaths: {Deaths}";
+        Deaths++;
+        CurrentHP = MaxHP;
     }
 }
