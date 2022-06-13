@@ -47,6 +47,7 @@ public class PlayerManager : MonoBehaviour
         Deaths++;
         CurrentHP = MaxHP;
         GameObject.FindGameObjectWithTag("Player").transform.localPosition = new Vector3(0, -4, -1);
-        GameObject.Find("Background").GetComponent<RoomManager>().RoomReset();
+        GameObject.FindObjectOfType<Camera>().GetComponent<RoomManager>().RoomReset();
+        GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().timerValue = 20f;
     }
 }

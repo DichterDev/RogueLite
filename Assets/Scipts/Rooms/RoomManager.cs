@@ -6,6 +6,7 @@ public class RoomManager : MonoBehaviour
 {
     GameObject[] rooms;
     int count = 0;
+    bool pause = false;
 
     private void Awake()
     {
@@ -23,18 +24,26 @@ public class RoomManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D) || !pause) pause = false;
+        if (pause) Time.timeScale = 0;
+        if (!pause) Time.timeScale = 1;
     }
 
     public void RoomReset()
     {
-        GameObject room = GameObject.FindGameObjectWithTag("Room");
-
-        foreach(Transform child in transform)
+        foreach (GameObject proj in GameObject.FindGameObjectsWithTag("Projectile"))
         {
-
+            Destroy(proj);
         }
 
+        foreach (GameObject child in transform)
+        {
+            if (child.name == "PS")
+            {
+                child.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+            }
+        }
+        pause = true;
     }
 
     public void NextRoom()
@@ -47,5 +56,6 @@ public class RoomManager : MonoBehaviour
         rooms[count].SetActive(false);
         count++;
         rooms[count].SetActive(true);
+        pause = true;
     }
 }
