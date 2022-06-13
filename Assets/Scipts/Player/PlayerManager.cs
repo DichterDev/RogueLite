@@ -46,5 +46,7 @@ public class PlayerManager : MonoBehaviour
         GameObject.FindGameObjectWithTag("DeathCount").GetComponent<Text>().text = $"Deaths: {Deaths}";
         Deaths++;
         CurrentHP = MaxHP;
+        GameObject.FindGameObjectWithTag("Player").transform.localPosition = new Vector3(0, -4, -1);
+        GameObject.Find("Background").GetComponent<RoomManager>().RoomReset();
     }
 }

@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     float deltaTimer = 0f;
-    float timerValue = 1f;
+    float timerValue = 20f;
 
     GameObject[] rooms;
+    int roomsCount = 0;
 
     private void Awake()
     {
@@ -23,21 +24,22 @@ public class Timer : MonoBehaviour
         {
             gameObject.GetComponent<Text>().text = timerValue + " s";
             deltaTimer = 0f;
-            timerValue++;
+            timerValue--;
         }
 
-        if (timerValue == 20)
+        if (timerValue == 0)
         {
-            timerValue = 0f;
-            GameObject.FindGameObjectWithTag("Player").transform.localScale = new Vector3(0, -4, -1);
+            timerValue = 20f;
+            GameObject.FindGameObjectWithTag("Player").transform.localPosition = new Vector3(0, -4, -1);
             // Reinstantiate current room
-            // countdown and start
+            GameObject.Find("Background").GetComponent<RoomManager>().NextRoom();
         }
     }
 
-    void RoomReset()
+    void NextRoom()
     {
         GameObject room = GameObject.FindGameObjectWithTag("Room");
         Destroy(room);
+        Instantiate(rooms[roomsCount]);
     }
 }
