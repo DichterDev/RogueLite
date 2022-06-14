@@ -15,7 +15,7 @@ public class BulletCollision : MonoBehaviour
     {
         if (collision.collider.CompareTag(tag))
         {
-            Physics2D.IgnoreCollision(collision.collider, collision.otherCollider);
+            Physics2D.IgnoreCollision(collision.collider.GetComponent<CircleCollider2D>(), collision.otherCollider.GetComponent<CircleCollider2D>());
             return;
         }
         if (collision.collider.CompareTag("Player"))
