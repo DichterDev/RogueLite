@@ -12,8 +12,16 @@ public class OptionMenue : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
-            if (menue) Time.timeScale = 1; canvas.enabled = false ;
-            if (!menue) Time.timeScale = 0; canvas.enabled = true;
+            if (menue)
+            {
+                Time.timeScale = 1;
+                canvas.enabled = false;
+            }
+            if (!menue)
+            {
+                Time.timeScale = 0;
+                canvas.enabled = true;
+            }
             menue = !menue;
         }
     }
