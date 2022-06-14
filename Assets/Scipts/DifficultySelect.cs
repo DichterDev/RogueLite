@@ -5,14 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class DifficultySelect : MonoBehaviour
 {
+
     public void MoveToScene(int sceneID)
     {
         SceneManager.LoadScene(sceneID);
     }
 
-    public void Difficulty(bool Difficulty)
+    public void SetDifficulty(int diff)
     {
-        
+        Controller.difficulty = diff;
     }
 
 }

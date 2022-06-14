@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour
     public Rigidbody2D rb;
     public Sprite heart_full;
     public Sprite heart_empty;
+    Timer timer;
 
     public int CurrentHP = 3;
     public int MaxHP = 3;
@@ -19,6 +20,14 @@ public class PlayerManager : MonoBehaviour
     public float dodgeCD = 1f;
     public bool Dodge = true;
     public float dodgeTime = 0f;
+
+    private void Awake()
+    {
+        if (Controller.difficulty == 1) MaxHP = 3;
+        if (Controller.difficulty == 2) MaxHP = 1;
+        SetHealthMax();
+        timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>();
+    }
 
     public void TakeDamage(int damage)
     {
@@ -43,11 +52,11 @@ public class PlayerManager : MonoBehaviour
 
     public void Death()
     {
-        GameObject.FindGameObjectWithTag("DeathCount").GetComponent<Text>().text = $"Deaths: {Deaths}";
         Deaths++;
+        GameObject.FindGameObjectWithTag("DeathCount").GetComponent<Text>().text = $"Deaths: {Deaths}";
+        timer.SetTimerValue(timer.timerStandardValue);
         SetHealthMax();
-        GameObject.FindGameObjectWithTag("Player").transform.localPosition = new Vector3(0, -4, -1);
-        GameObject.FindObjectOfType<Camera>().GetComponent<RoomManager>().RoomReset();
-        GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().timerValue = 20f;
+        transform.localPosition = new Vector3(0, -4, -1);
+        GameObject.FindObjectOfType<Camera>().GetComponent<RoomManager>().RoomReset(); // This has top be last as it stops the scene from progressing
     }
 }

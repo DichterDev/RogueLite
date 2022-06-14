@@ -36,11 +36,11 @@ public class RoomManager : MonoBehaviour
             Destroy(proj);
         }
 
-        foreach (GameObject child in transform)
+        foreach (Transform child in transform)
         {
-            if (child.name == "PS")
+            if (child.gameObject.name == "PS")
             {
-                child.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+                child.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
             }
         }
         pause = true;

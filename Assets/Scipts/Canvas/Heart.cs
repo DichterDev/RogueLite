@@ -18,11 +18,11 @@ public class Heart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerManager.CurrentHP < playerManager.MaxHP)
+        if (playerManager.CurrentHP < hearts.Length)
         {
-            for (int i = playerManager.MaxHP - 1; i > playerManager.CurrentHP - 1; i--)
+            for (int i = playerManager.MaxHP - 1; i >= playerManager.CurrentHP; i--)
             {
-
+                if (i < 0) break;
                 hearts[i].GetComponent<Image>().sprite = playerManager.heart_empty;
             }
         }
