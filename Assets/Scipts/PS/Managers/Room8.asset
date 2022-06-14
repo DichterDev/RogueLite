@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a65ce6b71f1ed840b1144981e326ba0, type: 3}
   m_Name: Room8
   m_EditorClassIdentifier: 
-  Projectile: {fileID: 608616754420636994, guid: 131cf50fa7ff3934bb874f4959475314, type: 3}
+  Projectile: {fileID: 5058462188205565007, guid: 0e59d7d958a52844ea54cfa86451bd8f, type: 3}
   Firepoints: 4
   ProjDamage: 1
   ProjSpeed: 1
   ProjForce: 5
   ProjTime: 2
-  FireRate: 2
+  FireRate: 3
   SpinSpeed: 90
