@@ -20,7 +20,7 @@ public class Heart : MonoBehaviour
     {
         if (playerManager.CurrentHP < hearts.Length)
         {
-            for (int i = playerManager.MaxHP - 1; i >= playerManager.CurrentHP; i--)
+            for (int i = hearts.Length - 1; i >= playerManager.CurrentHP; i--)
             {
                 if (i < 0) break;
                 hearts[i].GetComponent<Image>().sprite = playerManager.heart_empty;
