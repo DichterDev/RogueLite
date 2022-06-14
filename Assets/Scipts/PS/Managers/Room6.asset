@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a65ce6b71f1ed840b1144981e326ba0, type: 3}
   m_Name: Room6
   m_EditorClassIdentifier: 
-  Projectile: {fileID: 0}
-  Firepoints: 4
+  Projectile: {fileID: 5058462188205565007, guid: 0e59d7d958a52844ea54cfa86451bd8f, type: 3}
+  Firepoints: 6
   ProjDamage: 1
   ProjSpeed: 5
   ProjForce: 5
