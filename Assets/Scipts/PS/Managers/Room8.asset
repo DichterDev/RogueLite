@@ -15,8 +15,8 @@ MonoBehaviour:
   Projectile: {fileID: 608616754420636994, guid: 131cf50fa7ff3934bb874f4959475314, type: 3}
   Firepoints: 4
   ProjDamage: 1
-  ProjSpeed: 5
+  ProjSpeed: 1
   ProjForce: 5
-  ProjTime: 5
-  FireRate: 5
+  ProjTime: 2
+  FireRate: 2
   SpinSpeed: 90
