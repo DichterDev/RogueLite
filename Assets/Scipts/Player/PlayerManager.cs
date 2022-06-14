@@ -56,7 +56,7 @@ public class PlayerManager : MonoBehaviour
         GameObject.FindGameObjectWithTag("DeathCount").GetComponent<Text>().text = $"Deaths: {Deaths}";
         timer.SetTimerValue(timer.timerStandardValue);
         SetHealthMax();
-        transform.localPosition = new Vector3(0, -4, -1);
+        transform.localPosition = new Vector3(0, -4, 1);
         GameObject.FindObjectOfType<Camera>().GetComponent<RoomManager>().RoomReset(); // This has top be last as it stops the scene from progressing
     }
 }
