@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class RoomManager : MonoBehaviour
 {
-    GameObject[] rooms;
+    public GameObject[] rooms;
     int count = 0;
     bool pause = false;
 
     private void Awake()
     {
-        rooms = GameObject.FindGameObjectsWithTag("Room");
+
     }
 
     void Start()
@@ -56,6 +57,7 @@ public class RoomManager : MonoBehaviour
         rooms[count].SetActive(false);
         count++;
         rooms[count].SetActive(true);
+
         pause = true;
     }
 }

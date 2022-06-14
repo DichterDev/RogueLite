@@ -32,7 +32,7 @@ public class Timer : MonoBehaviour
         {
 
             timerValue = timerStandardValue;
-            GameObject.FindGameObjectWithTag("Player").transform.localPosition = new Vector3(0, -4, -1);
+            GameObject.FindGameObjectWithTag("Player").transform.localPosition = new Vector3(0, -4, 1);
             // Reinstantiate current room
             GameObject.FindObjectOfType<Camera>().GetComponent<RoomManager>().NextRoom();        
         }

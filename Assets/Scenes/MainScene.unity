@@ -2550,6 +2550,7 @@ MonoBehaviour:
   dodgeCD: 1
   Dodge: 1
   dodgeTime: 0
+  invinciblePhase: 0
 --- !u!212 &524237499
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3785,7 +3786,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 770953340}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: -1, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1695512547}
@@ -4418,12 +4419,12 @@ GameObject:
   m_Component:
   - component: {fileID: 853934747}
   m_Layer: 0
-  m_Name: Room
+  m_Name: 1
   m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &853934747
 Transform:
   m_ObjectHideFlags: 0
@@ -5984,7 +5985,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1404545945}
   m_Layer: 0
-  m_Name: Room3
+  m_Name: 3
   m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6783,12 +6784,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1615675419}
   m_Layer: 0
-  m_Name: Room2
+  m_Name: 2
   m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1615675419
 Transform:
   m_ObjectHideFlags: 0

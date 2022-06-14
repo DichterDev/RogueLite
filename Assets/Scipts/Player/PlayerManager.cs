@@ -21,16 +21,21 @@ public class PlayerManager : MonoBehaviour
     public bool Dodge = true;
     public float dodgeTime = 0f;
 
+    public bool invinciblePhase = false;
+
     private void Awake()
     {
         if (Controller.difficulty == 1) MaxHP = 3;
         if (Controller.difficulty == 2) MaxHP = 1;
         SetHealthMax();
         timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>();
+        Death();
     }
 
     public void TakeDamage(int damage)
     {
+        if (invinciblePhase) return;
+
         CurrentHP -= damage;
 
         if (CurrentHP <= 0)
