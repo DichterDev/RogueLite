@@ -2545,7 +2545,7 @@ MonoBehaviour:
   CurrentHP: 3
   MaxHP: 3
   Deaths: 0
-  Speed: 5
+  Speed: 20
   MaxSpeed: 10
   dodgeCD: 1
   Dodge: 1
@@ -3809,7 +3809,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
