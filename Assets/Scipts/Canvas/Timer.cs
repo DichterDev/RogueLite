@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     float deltaTimer = 0f;
-    float timerValue = 1f;
+    public float timerValue = 20f;
 
     GameObject[] rooms;
 
@@ -23,21 +23,15 @@ public class Timer : MonoBehaviour
         {
             gameObject.GetComponent<Text>().text = timerValue + " s";
             deltaTimer = 0f;
-            timerValue++;
+            timerValue--;
         }
 
-        if (timerValue == 20)
+        if (timerValue == 0)
         {
-            timerValue = 0f;
-            GameObject.FindGameObjectWithTag("Player").transform.localScale = new Vector3(0, -4, -1);
+            timerValue = 20f;
+            GameObject.FindGameObjectWithTag("Player").transform.localPosition = new Vector3(0, -4, -1);
             // Reinstantiate current room
-            // countdown and start
+            GameObject.FindObjectOfType<Camera>().GetComponent<RoomManager>().NextRoom();        
         }
-    }
-
-    void RoomReset()
-    {
-        GameObject room = GameObject.FindGameObjectWithTag("Room");
-        Destroy(room);
     }
 }
