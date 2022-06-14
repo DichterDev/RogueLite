@@ -18,5 +18,5 @@ MonoBehaviour:
   ProjSpeed: 5
   ProjForce: 5
   ProjTime: 5
-  FireRate: 3
+  FireRate: 5
   SpinSpeed: 90
