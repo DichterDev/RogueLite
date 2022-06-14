@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a65ce6b71f1ed840b1144981e326ba0, type: 3}
-  m_Name: Room5
+  m_Name: Room5.1
   m_EditorClassIdentifier: 
   Projectile: {fileID: 0}
   Firepoints: 4
@@ -19,4 +19,4 @@ MonoBehaviour:
   ProjForce: 5
   ProjTime: 5
   FireRate: 5
-  SpinSpeed: 90
+  SpinSpeed: -90
