@@ -928,11 +928,11 @@ GameObject:
   - component: {fileID: 179212661}
   m_Layer: 0
   m_Name: Room4
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &179212661
 Transform:
   m_ObjectHideFlags: 0
@@ -965,11 +965,11 @@ GameObject:
   - component: {fileID: 182928007}
   m_Layer: 0
   m_Name: Room7
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &182928007
 Transform:
   m_ObjectHideFlags: 0
@@ -3317,7 +3317,7 @@ GameObject:
   - component: {fileID: 767178981}
   m_Layer: 0
   m_Name: Room6
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3375,7 +3375,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e7e73394edf22548a84d75fde6e0006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rooms: []
+  rooms:
+  - {fileID: 853934745}
+  - {fileID: 1615675418}
+  - {fileID: 1404545944}
+  - {fileID: 179212660}
+  - {fileID: 1335066550}
+  - {fileID: 767178980}
+  - {fileID: 767178980}
+  - {fileID: 1480467226}
 --- !u!81 &770953342
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3959,12 +3967,12 @@ GameObject:
   m_Component:
   - component: {fileID: 853934747}
   m_Layer: 0
-  m_Name: Room
+  m_Name: Room1
   m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &853934747
 Transform:
   m_ObjectHideFlags: 0
@@ -5089,11 +5097,11 @@ GameObject:
   - component: {fileID: 1335066551}
   m_Layer: 0
   m_Name: Room5
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1335066551
 Transform:
   m_ObjectHideFlags: 0
@@ -5423,7 +5431,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1404545945
 Transform:
   m_ObjectHideFlags: 0
@@ -5644,11 +5652,11 @@ GameObject:
   - component: {fileID: 1480467227}
   m_Layer: 0
   m_Name: Room8
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1480467227
 Transform:
   m_ObjectHideFlags: 0
@@ -6014,7 +6022,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1615675419
 Transform:
   m_ObjectHideFlags: 0
