@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -9,11 +10,8 @@ public class Timer : MonoBehaviour
     public float timerStandardValue = 20f;
     public float timerValue = 0f;
 
-    GameObject[] rooms;
-
     private void Awake()
     {
-        rooms = GameObject.FindGameObjectsWithTag("Room");
         timerValue = timerStandardValue;
         gameObject.GetComponent<Text>().text = timerValue + " s";
     }
@@ -30,6 +28,8 @@ public class Timer : MonoBehaviour
 
         if (timerValue == 0f)
         {
+
+            if (GameObject.FindObjectOfType<Camera>().GetComponent<RoomManager>().count == 7) SceneManager.LoadScene(2);
 
             timerValue = timerStandardValue;
             GameObject.FindGameObjectWithTag("Player").transform.localPosition = new Vector3(0, -4, 1);

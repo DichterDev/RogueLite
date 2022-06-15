@@ -39,11 +39,6 @@ public class PlayerMovement : MonoBehaviour
         // animator.SetFloat("Sideways", HorizontalMove);
 
         moveSpeed = player.Speed;
-
-        if(Input.GetKey(KeyCode.Space) && player.Dodge)
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y, -1);
-        }
     }
 
     private void FixedUpdate()

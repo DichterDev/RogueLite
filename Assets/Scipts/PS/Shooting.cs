@@ -33,7 +33,7 @@ public class Shooting : MonoBehaviour
     {
         foreach (Transform t in firePoints)
         {
-            GameObject bullet = Instantiate(manager.Projectile, t.position, t.rotation);
+            GameObject bullet = Instantiate(manager.Projectile, new Vector3(t.position.x, t.position.y, 1), t.rotation);
             bullet.name = "bullet";
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(t.up * manager.ProjForce, ForceMode2D.Impulse);
